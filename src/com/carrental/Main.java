@@ -1,7 +1,21 @@
 package com.carrental;
 
+import com.carrental.model.Car;
+import com.carrental.system.CarRentalSystem;
+
 public class Main {
     public void main(String[] args){
-        System.out.println("Hello");
+        CarRentalSystem carRentalSystem = new CarRentalSystem();
+
+        Car car1 = new Car("C001","BMW","X6",100.50);
+        Car car2 = new Car("C002", "Honda", "Accord", 70.0);
+        Car car3 = new Car("C003", "Mahindra", "Thar", 150.0);
+
+        carRentalSystem.addCar(car1);
+        carRentalSystem.addCar(car2);
+        carRentalSystem.addCar(car3);
+
+        carRentalSystem.menu();
+
     }
 }
