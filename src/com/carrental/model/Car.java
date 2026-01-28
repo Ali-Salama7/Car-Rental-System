@@ -29,10 +29,6 @@ public class Car {
         return model;
     }
 
-    public double getPricePerDay() {
-        return pricePerDay;
-    }
-
     public boolean isAvailable() {
         return isAvailable;
     }
@@ -43,5 +39,9 @@ public class Car {
 
     public void returnCar(){
         isAvailable = true;
+    }
+
+    public double calculatePrice(int rentalDays) {
+        return pricePerDay * rentalDays;
     }
 }
